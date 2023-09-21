@@ -1,0 +1,23 @@
+.face-snap-card {
+    box-sizing: border-box;
+    width: 50%;
+    margin: 30px auto;
+    padding: 10px 30px;
+    box-shadow: rgb(0, 0, 0) 5px 5px 22px;
+    div{
+        text-align: center;
+        img{
+            width: 30%;
+        }
+    }
+}
+
+.selected-facesnap {
+    width: 70%;
+    box-shadow: rgb(0, 0, 0) 10px 10px 300px;
+    div{
+        img{
+            width: 60%;
+        }
+    }
+}

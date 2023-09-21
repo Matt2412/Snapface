@@ -1,0 +1,20 @@
+<div class="face-snap-card" 
+    [ngClass]="{'selected-facesnap': isSelectedCard}" (mouseover)="isSelectedCard=true" (mouseleave)="isSelectedCard=false">
+    
+    <h2> {{ faceSnap.title | uppercase }} </h2>
+    <p> {{ faceSnap.dateDebut | date }} - {{ faceSnap.dateFin | date }}</p>
+    <p> {{ faceSnap.description }} </p>
+    
+    
+    <div class="text-center">
+        <img [src]="faceSnap.imageUrl" [alt]="faceSnap.description">
+    </div>
+
+    <p>
+        <button (click)="onSnap()">{{buttonText}} </button>
+        <span [ngStyle]="{ color: 'rgb(0, ' + faceSnap.snaps + ', 0)' }"> {{ faceSnap.snaps }}</span>
+    </p>
+    <p *ngIf="faceSnap.location === 'Paris'">Lieu : {{ faceSnap.location }}</p>
+    <!--<p *ngIf="'truc'.includes('ru')    ">RU</p>-->
+    <p *ngIf="isSelectedCard">Technologies utilisées : {{ faceSnap.technos }}</p>
+</div>

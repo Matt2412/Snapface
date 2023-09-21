@@ -1,0 +1,8 @@
+<header>
+    <h1> {{ "Dossier de compétences" | uppercase }}</h1>
+    <input id="searchbar" onkeyup="search_animal()" type="text" name="search" placeholder="Recherche">
+</header>
+
+
+
+<app-face-snap *ngFor="let i of TabSnap" [faceSnap]="i"></app-face-snap>
